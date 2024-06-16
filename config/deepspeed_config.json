@@ -1,0 +1,21 @@
+{
+  "train_batch_size": 32,
+  "steps_per_print": 10,
+  "optimizer": {
+    "type": "Adam",
+    "params": {
+      "lr": 0.00015,
+      "betas": [0.9, 0.999],
+      "eps": 1e-8,
+      "weight_decay": 3e-7
+    }
+  },
+  "fp16": {
+    "enabled": true
+  },
+  "zero_optimization": {
+    "stage": 1,
+    "reduce_bucket_size": 5e8,
+    "allgather_bucket_size": 5e8
+  }
+}
